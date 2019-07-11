@@ -1,7 +1,7 @@
 ### 目录
 
 > - [如何高效的学习？](Part.1.A.study.efficiently.ipynb)
-> - [如何学习PowerShell？）](Part.1.B.how.to.learn.powershell.ipynb)
+> - [如何高效学习PowerShell？）](Part.1.B.how.to.learn.powershell.ipynb)
 > - [如何通过Github学习及参与本教程编写？](Part.1.C.learn.and.contribute.this.tutorial.via.Github.ipynb)
 > - [认识PowerShell](Part.2.D.1.what.is.powershell.ipynb)
 > - [安装PowerShell](Part.2.D.2.install.powershell.ipynb)
