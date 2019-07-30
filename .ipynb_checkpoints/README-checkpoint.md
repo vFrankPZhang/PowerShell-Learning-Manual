@@ -1,7 +1,17 @@
+Part.1.前导课  
+Part.2.D 开始使用PowerShell  
+Part.2.E PowerShell基础知识  
+Part.2.F 管道和对象  
+Part.2.G 对象的操作  
+Part.2.H 参数的帮助
+
+
+
+
 ### 目录
 
 > - [Part.1.A.如何高效的学习？](Part.1.A.study.efficiently.ipynb)
-> - [Part.1.B.如何高效学习PowerShell？）](Part.1.B.how.to.learn.powershell.ipynb)
+> - [Part.1.B.如何高效学习PowerShell？](Part.1.B.how.to.learn.powershell.ipynb)
 > - [Part.1.C.如何通过Github学习及参与本教程编写？](Part.1.C.learn.and.contribute.this.tutorial.via.Github.ipynb)
 > - [Part.2.D.1.认识PowerShell](Part.2.D.1.what.is.powershell.ipynb)
 > - [Part.2.D.2.安装PowerShell](Part.2.D.2.install.powershell.ipynb)
