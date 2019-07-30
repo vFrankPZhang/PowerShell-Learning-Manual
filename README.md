@@ -1,3 +1,13 @@
+Part.1.前导课  
+Part.2.D 开始使用PowerShell  
+Part.2.E PowerShell基础知识  
+Part.2.F 管道和对象  
+Part.2.G 对象的操作  
+Part.2.H 参数的帮助
+
+
+
+
 ### 目录
 
 > - [Part.1.A.如何高效的学习？](Part.1.A.study.efficiently.ipynb)
