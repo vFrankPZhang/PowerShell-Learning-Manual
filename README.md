@@ -4,6 +4,9 @@ Part.2.E PowerShell基础知识
 Part.2.F 管道和对象  
 Part.2.G 对象的操作  
 Part.2.H 参数的帮助
+Part.2.I 输入输出
+Part.2.J 远程
+
 
 
 
