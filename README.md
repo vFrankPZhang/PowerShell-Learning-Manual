@@ -4,7 +4,17 @@ Part.2.E PowerShell基础知识
 Part.2.F 管道和对象  
 Part.2.G 对象的操作  
 Part.2.H 参数的帮助
+Part.2.I 文件系统
+Part.2.J 输入输出
+Part.2.K 远程控制
+Part.2.L 使用WMI（Windows Management Instrumentation）
+Part.2.M 对命令扩展
+Part.3.N 脚本的组成
+Part.3.O 脚本的帮助信息
+Part.3.P 脚本的参数
+Part.3.Q 脚本的主体
 
+T-appendix
 
 
 
