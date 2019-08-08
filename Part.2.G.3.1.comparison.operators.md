@@ -1,4 +1,3 @@
-
 # 比较运算符
 
 | 比较运算符 | 意思 | 例子（返回True） |
@@ -13,8 +12,3 @@
 | -notlike      | 不相似（文字，支持通配符）       | "file.doc" -notlike "p*.doc" |
 | -contains      | 包含       | 1,2,3 -contains 1 |
 | -notcontains      |  不包含      | 1,2,3 -notcontains 4 |
-
-
-```python
-
-```
