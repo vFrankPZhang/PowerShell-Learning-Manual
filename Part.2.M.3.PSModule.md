@@ -30,6 +30,6 @@ PSGallery                 Untrusted            https://www.powershellgallery.com
 
 ## 安装module
 
-Find-Module
-Install-Module
-Update-Module
+Find-Module  
+Install-Module  
+Update-Module  
