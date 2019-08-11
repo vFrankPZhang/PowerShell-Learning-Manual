@@ -11,7 +11,7 @@ Windows PowerShell支持多种远程技术，包括WMI，RPC和WS-Management。
 
 **【例子】**
 
-```bash
+```powershell
 Restart-Computer
 Get-EventLog
 Get-HotFix
@@ -32,7 +32,7 @@ Get-WmiObject
 
 可以通过下面的命令跟一台远程的机器建立一个交互式的会话：
 
-```bash
+```powershell
 Enter-PSSession Server01
 ```
 
@@ -40,7 +40,7 @@ Enter-PSSession Server01
 
 可以通过下面的命令结束会话：
 
-```bash
+```powershell
 Exit-PSSession
 ```
 
@@ -52,7 +52,7 @@ Exit-PSSession
 
 如果只是想在远程的一台或多台机器上执行命令，我们可以使用Invoke-Command命令。
 
-```bash
+```powershell
 Invoke-Command -ComputerName Server01, Server02 -ScriptBlock {Get-UICulture}
 ```
 
@@ -61,7 +61,7 @@ Invoke-Command -ComputerName Server01, Server02 -ScriptBlock {Get-UICulture}
 
 如果你想远程在一台或多台机器上执行一个脚本，还是Invoke-Command命令，你需要用到参数`-FilePath`来指定脚本的位置，请注意，这个脚本必须在你本地计算机上，或者是一个你可以访问的位置，脚本运行的结果会返回到你的本地计算机。
 
-```bash
+```powershell
 Invoke-Command -ComputerName Server01, Server02 -FilePath c:\Scripts\DiskCollect.ps1
 ```
 
@@ -71,7 +71,7 @@ Invoke-Command -ComputerName Server01, Server02 -FilePath c:\Scripts\DiskCollect
 
 比如：
 
-```bash
+```powershell
 $s = New-PSSession -ComputerName Server01, Server02
 Invoke-Command -Session $s {$h = Get-HotFix}
 Invoke-Command -Session $s {$h | where {$_.InstalledBy -ne "NTAUTHORITY\SYSTEM"}}
