@@ -6,7 +6,7 @@
 
 我们可以通过对象的属性来筛选对象。
 
-**【例子】**
+### 【例子】
 
 以Service为例，我们先来查看一下Service有哪些属性。
 
@@ -22,7 +22,7 @@ Get-Service | Get-Member -MemberType Property
 Get-Service | Where-Object -FilterScript {$_.Status -eq "Running"}
 ```
 
-**【练习】**
+### 【练习】
 
 1.把服务中不能停止的筛选出来。  
 2.把状态为运行的服务中，不能停止的筛选出来。
@@ -31,8 +31,12 @@ Get-Service | Where-Object -FilterScript {$_.Status -eq "Running"}
 
 可以通过标准的逻辑操作符把多个筛选条件合并成一条。
 
-**【例子】**
+### 【例子】
 
 ```bash
 Get-Service | Where-Object -FilterScript {($_.Status -eq "Running") -and ($_.canstop -eq "False")}
 ```
+
+### 【练习】
+
+1.把进程中名字包含字母p的进程找出来。
