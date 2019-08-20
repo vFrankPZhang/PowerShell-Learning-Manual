@@ -6,27 +6,21 @@ Visual Studio Code 是一个运行于 Mac OS X、Windows和 Linux 之上的，�
 ## 如何使用VisualStudioCode查看本教程内容？
 1.下载并安装[Visual Studio Code](https://code.visualstudio.com/)
 
-2.打开Visual Studio Code，点击左上角 File-> Add Folder to Workspace。进入本地Git Hub Desktop所对应的本地路径，选择文件夹，点击Add，即可显示文件列表。
+2.打开Visual Studio Code，点击左上角 `File` -> `Add Folder to Workspace`。进入本地Git Hub Desktop所对应的本地路径，选择文件夹，点击`Add`，即可显示文件列表。
 
 ![](images/Add_File_to_WorkSpace.PNG)
 
 ## 如何使用VisualStudioCode编辑本教程内容？
 
-3.在左边的列表中点击想要查看或编辑的文件；
+3.在左边的列表中点击想要查看或编辑的文件；点击编辑页右上角`Open Preview to the Side`即可看到文件的格式（.md文件）；
 
-![](images/github_fork.PNG)
+![](images/open_file.PNG)
 
-4.点击编辑页右上角 Open Preview to the Side 即可看到文件的格式（仅限 .md 文件）；  
+ 
 
-![](images/clone_PSlearningManual.png)
+## 如何将自己的变更提交到自己的Github上？这块还没弄清楚，写不下去了
 
-5.创建自己的Branch；  
-6.按照[Jupyterlab的安装与配置](T-appendix.jupyter.installation.and.setup.ipynb)在本地搭建好Jupyterlab；  
-7.通过Jupyterlab浏览本书和直接编辑本书；  
-
-## 如何将自己的变更提交到自己的Github上？
-
-1.在Jupyterlab中，双击需要修改的文字或图片进入编辑框。修改完毕后点击上方的Run按钮即可看到格式。
+1.在左列`Suorce Control`中，创建一个新的Branch。修改完毕后点击上方的Run按钮即可看到格式。
 
 ![](images/editonJupyterlab.PNG)
 
