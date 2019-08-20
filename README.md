@@ -12,11 +12,12 @@ Part.2.I PSProvider
 Part.2.J 输入输出
 Part.2.K 远程控制
 Part.2.L 使用WMI（Windows Management Instrumentation）
-Part.2.M 扩展命令
-Part.3.N 脚本的组成
-Part.3.O 脚本的帮助信息
-Part.3.P 脚本的参数
-Part.3.Q 脚本的主体
+Part.2.M 作业Job
+Part.2.N 扩展命令
+Part.3.O 脚本的组成
+Part.3.P 脚本的帮助信息
+Part.3.Q 脚本的参数
+Part.3.R 脚本的主体
 
 T-appendix
 
