@@ -114,3 +114,54 @@ PS C:\Users\Frank> $var[-2]
 从前往后0，1，2...
 从后往前-1，-2...
 
+如果一个变量包含了多个对象，也不能对这个变量直接使用对象的方法了，需要指定具体是哪一个变量。
+
+```powershell
+PS C:\Windows\system32> $var.toupper()
+Method invocation failed because [System.Int32] does not contain a method named 'toupper'.
+At line:1 char:1
++ $var.toupper()
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : MethodNotFound
+
+PS C:\Windows\system32> $var[0].toupper()
+A
+```
+
+我们指定了$var[0]后，就可以使用方法toupper()了。
+
+方法只是产生了新的结果，并不会改变原来的变量中的值。
+
+```powershell
+PS C:\Windows\system32> $var[0].toupper()
+A
+PS C:\Windows\system32> $var
+a
+1
+1.2
+```
+
+如果想更改变量值，需要指定具体的变量中的位置。
+
+```powershell
+PS C:\Windows\system32> $var[0]='hello'
+PS C:\Windows\system32> $var
+hello
+1
+1.2
+```
+
+$():子表达式，$()中的所有内容都会被当成普通的PowerShell命令。
+
+```powershell
+PS C:\Windows\system32> $firstname = $service[0].name
+PS C:\Windows\system32> $firstname
+AdobeARMservice
+PS C:\Windows\system32> $firstname = "The first name is $($service[0].name)"
+PS C:\Windows\system32> $firstname
+The first name is AdobeARMservice
+```
+
+# 声明变量类型
+
