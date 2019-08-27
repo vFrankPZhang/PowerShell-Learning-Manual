@@ -72,5 +72,45 @@ $a is a
 
 `去掉了$代表变量的意义
 
+```powershell
+PS C:\Users\Frank> $a = 'a'
+PS C:\Users\Frank> $b = "`$a `nis `n$a"
+PS C:\Users\Frank> $b
+$a
+is
+a
+```
 
+`n 换行符
+
+`t tab
+`a 机器发出声响 alert
+
+# 在一个变量中存储多个对象
+
+```powershell
+PS C:\Users\Frank> $var = 'a',1,1.2
+PS C:\Users\Frank> $var
+a
+1
+1.2
+```
+
+用，号分割多个对象
+
+# 访问包含多个对象的变量中的某一个对象
+
+```powershell
+PS C:\Users\Frank> $var[0]
+a
+PS C:\Users\Frank> $var[1]
+1
+PS C:\Users\Frank> $var[-1]
+1.2
+PS C:\Users\Frank> $var[-2]
+1
+```
+
+从前往后0，1，2...
+从后往前-1，-2...
 
