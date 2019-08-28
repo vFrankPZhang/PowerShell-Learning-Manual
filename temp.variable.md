@@ -165,3 +165,33 @@ The first name is AdobeARMservice
 
 # 声明变量类型
 
+```powershell
+PS C:\Users\Frank> $number = Read-host "Enter a number"
+Enter a number: 100
+PS C:\Users\Frank> $number * 10
+100100100100100100100100100100
+```
+
+我们发现，结果不是1000，因为PowerShell把我们输入的100作为了字符串处理，而不是当作数字处理。
+
+如何解决这个问题？我们可以通过[]符号及类型，告诉Shell，$number的类型应该是一个整型。
+
+```powershell
+PS C:\Users\Frank> [int]$number = Read-host "Enter a number"
+Enter a number: 100
+PS C:\Users\Frank> $number * 100
+10000
+```
+
+另一个好处是，当我们输入的数据类型不对时，会报错：
+
+```powershell
+PS C:\Users\Frank> [int]$number = Read-host "Enter a number"
+Enter a number: hello
+无法将值“hello”转换为类型“System.Int32”。错误:“输入字符串的格式不正确。”
+所在位置 行:1 字符: 1
++ [int]$number = Read-host "Enter a number"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (:) [], ArgumentTransformationMetadataException
+    + FullyQualifiedErrorId : RuntimeException
+```

@@ -9,6 +9,7 @@ Part.2.F 管道和对象
 Part.2.G 对象的操作  
 Part.2.H 参数的帮助
 Part.2.I PSProvider
+变量
 Part.2.J 输入输出
 Part.2.K 远程控制
 Part.2.L 使用WMI（Windows Management Instrumentation）
