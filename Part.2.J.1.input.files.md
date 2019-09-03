@@ -15,3 +15,22 @@
 ### 【练习】
 
 1.比较一下Get-Content和Import-Clixml的区别。
+
+## 人与CLI的交互——输入
+
+PowerShell的Read-Host cmdlet的功能事提供一个文本提示，然后收集来自用户的输入信息。
+
+```powershell
+PS C:\Windows\system32> Read-Host 'Enter a computer name'
+Enter a computer name: Server-R1
+Server-R1
+```
+
+通常，我们会把输入的结果传入给一个变量来使用。
+
+```powershell
+PS C:\Windows\system32> $ComputerName = Read-Host 'Enter a computer name'
+Enter a computer name: Server-R1
+PS C:\Windows\system32> $ComputerName
+Server-R1
+```
