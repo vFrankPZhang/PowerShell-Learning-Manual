@@ -17,6 +17,7 @@ Part.2.M 作业Job
 Part.2.N 同时处理多个对象
 
 Part.2.O 扩展命令
+PowerShell 脚本语言
 Part.3.P 脚本的组成
 Part.3.Q 脚本的帮助信息
 Part.3.R 脚本的参数
