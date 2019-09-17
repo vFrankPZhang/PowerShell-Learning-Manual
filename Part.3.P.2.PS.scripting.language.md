@@ -62,7 +62,24 @@ Switch ($status) {
 }
 ```
 
-但有一个重要的区别是，上面的Switch结构会执行所有符合条件的后面的命令，但是If只会执行第一次遇到的符合条件的后面的操作。
+```powershell
+$result = ""
+$servername = 'DCFILE01'
+Switch -wildcard ($servername) {
+    "*DC*" { $result += ' Domain Controller ' }
+    "*FILE*" { $result += ' File Server ' }
+    "*SQL*" { $result += ' SQL Server ' }
+    "*EXCH*" { $result += ' Exchange Server ' }
+}
+Write-Host $result
+
+PS C:\> d:\script\test.ps1
+
+
+ Domain Controller  File Server
+```
+
+可以看到，switch将会执行所有符合条件的命令，不同的是if只会执行第一次符合条件的需要执行的命令。
 
 ## 循环
 
