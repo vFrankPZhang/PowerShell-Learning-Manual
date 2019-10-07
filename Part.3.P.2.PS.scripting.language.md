@@ -81,11 +81,22 @@ PS C:\> d:\script\test.ps1
 
 可以看到，switch将会执行所有符合条件的命令，不同的是if只会执行第一次符合条件的需要执行的命令。
 
+```powershell
+$result = ""
+Switch -wildcard ($servername) {
+"*DC*" { $result += ' Domain Controller '; break }
+"*FILE*" { $result += ' File Server '; break }
+"*SQL*" { $result += ' SQL Server '; break }
+"*EXCH*" { $result += ' Exchange Server '; break }
+}
+```
+通过Break，就会跟If的效果一样了，后面我们会说Break。
+
 ## 循环
 
 循环是用来执行一些反复的操作，直到满足某个条件为止。
 
-## Do While
+### Do While
 
 Do while是PowerShell主要的循环结构，用于直到一些条件为True，或者当条件为True时，重复执行一组命令。
 
@@ -104,3 +115,74 @@ While (Test-Path $path) {
     # commands
 }
 ```
+
+### ForEach
+
+ForEach 跟 ForEach-Object是非常像的，不同之处在于他们的语法。
+
+ForEach的作用是，获取数组中的对象，并且枚举这些对象，一次处理一个。
+
+比如说，我打开3个记事本，然后通过ForEach一个一个的结束他们的进程：
+
+```powershell
+PS C:\Users\vFrank> $processes = Get-Process notepad
+PS C:\Users\vFrank> $processes
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    447      26     9844      38264       0.53   1320   5 notepad
+    434      25     9280      37360       0.34   2564   5 notepad
+    431      26     9532      36992       0.38   3652   5 notepad
+
+
+PS C:\Users\vFrank> foreach ($process in $processes) {$process.kill()}
+```
+
+我们通过这个例子，来看一下ForEach的语法是怎样的。
+
+首先，花括号｛｝里面的内容，是我们要执行的操作，我们要对$process这个变量的对象，使用kill()的方法。
+
+那$process里面是什么呢？
+
+在ForEach后面的括号里面，$processes，注意，是复数，代表的是3个notepad进程，而$process in $processes是指，$process会依次去从$processes中取1个process对象赋给自己，然后执行花括号里面的内容，赋值一次，执行一次再去赋值，直到从$processes中取完。
+
+### For
+
+用于执行特定次数的循环。
+
+```powershell
+For ($i=0;$i -lt 5;$i++) {
+    #do something
+}
+```
+
+上面的例子是说，一开始i=0,如果i小于5，就会执行下面的操作，执行完，给i上1,直到不满足i小于5这个条件。
+
+## 打断（Break）和继续（Continue）
+
+Break和Continue是两个特殊的关键字，用于控制。
+
+### Break
+
+前面Switch
+
+Break会立即终止任何的结构，除了If。如果If被嵌套在别的结构里面，Break会直接跳出整个结构。
+
+比如：
+
+```powershell
+$i = 0
+do {
+if ($i –eq 5) { break }
+$i++
+} while ($i –lt 100)
+```
+
+加入没有if那行，i会一直加，知道i=100，但是因为if的那行，当x=5的时候，整个循环就跳出去了，不会继续加了。
+
+如果你使用Break但是，没有什么结构可以退出了，则整个脚本会结束。
+
+### Continue
+
+
+
